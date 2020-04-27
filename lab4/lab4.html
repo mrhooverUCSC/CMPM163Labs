@@ -12,19 +12,36 @@
 		<script src="../three.js-master/build/three.js"></script>
 		<script>
 			// setup the scene
-      			var scene = new THREE.Scene();
-      			var camera = new THREE.PerspectiveCamera(75, 
-window.innerWidth/window.innerHeight, 0.1, 1000);
-      			var renderer = new THREE.WebGLRenderer();
-      			renderer.setSize(window.innerWidth, window.innerHeight);
-      			document.body.appendChild(renderer.domElement);
+      		var scene = new THREE.Scene();
+      		var camera = new THREE.PerspectiveCamera(75, 
+				window.innerWidth/window.innerHeight, 0.1, 1000);
+      		var renderer = new THREE.WebGLRenderer();
+      		renderer.setSize(window.innerWidth, window.innerHeight);
+      		document.body.appendChild(renderer.domElement);
 			camera.position.z = 5;
 			
 			// setup the cube
-var geometry = new THREE.BoxGeometry();
-      			var material = new THREE.MeshPhongMaterial( { color: 0x00ff00 } );
-      			var cube = new THREE.Mesh(geometry, material);
-     			scene.add(cube);
+			var geometry = new THREE.BoxGeometry();
+			var texture = THREE.ImageUtils.loadTexture("172.jpg")
+			var normMap = THREE.ImageUtils.loadTexture("172_norm.jpg")
+      		var material = new THREE.MeshPhongMaterial( { map: texture, normalMap: normMap } );
+      		var cube = new THREE.Mesh(geometry, material);
+     		scene.add(cube);
+			
+			// cube 2
+			var material2 = new THREE.MeshPhongMaterial( { map: texture } );
+			var cube2 = new THREE.Mesh(geometry, material2);
+			scene.add(cube2)
+			cube2.position.x -= 2;
+			
+			// cube 3
+			var texture = THREE.ImageUtils.loadTexture("198.jpg")
+			var normMap = THREE.ImageUtils.loadTexture("199_norm.jpg")
+      		var material = new THREE.MeshPhongMaterial( { map: texture, normalMap: normMap } );
+      		var cube = new THREE.Mesh(geometry, material);
+			cube.position.x = 2
+     		scene.add(cube);
+
 
 			// add the light
 			var light = new THREE.PointLight(0xffffff, 1, 1000);
@@ -33,6 +50,8 @@ var geometry = new THREE.BoxGeometry();
 
 			function animate() {
 				requestAnimationFrame(animate);
+				light.position.x = (light.position.x + .5) % 25
+				light.position.y = (light.position.y + .5) % 25
 				renderer.render(scene, camera);
 			}
 			animate();
