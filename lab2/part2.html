@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Lab 2: Intro to Three.js Part 2</title>
+		<style>
+			body { margin: 0; }
+			canvas { display: block; }
+		</style>
+	</head>
+	<body>
+		<script src="../three.js-master/build/three.js"></script>
+		<script src="../three.js-master/examples/js/loaders/GLTFLoader.js"></script>
+		<script>
+      var scene = new THREE.Scene();
+      var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+      var renderer = new THREE.WebGLRenderer();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      document.body.appendChild(renderer.domElement);
+      camera.position.z = 100;
+	  camera.position.y = 35
+	  
+	  var light = new THREE.PointLight(0xffffff, 1, 10000);
+	  light.position.set(50, 50, 50);
+	  scene.add(light);
+	  
+	  var light2 = new THREE.PointLight(0xffd9df, 1, 10000);
+	  light2.position.set(10, 50, 50);
+	  scene.add(light2);
+
+
+	  var loader = new THREE.GLTFLoader();
+	  loader.load('cup.glb', function (gltf) {
+	  gltf.scene.position.x = 25
+	  gltf.scene.scale.x = gltf.scene.scale.y = gltf.scene.scale.z = 1.3
+	  scene.add(gltf.scene);
+	  }, function (xhr) {
+		console.log((xhr.loaded / xhr.total * 100) + '% loaded' );
+	  }, function (error) {
+		console.error(error);
+	  });
+
+	  var loader2 = new THREE.GLTFLoader();
+	  loader2.load('calla_lily_with_roses.glb', function (gltf) {
+	  scene.add(gltf.scene);
+	  }, function (xhr) {
+		console.log((xhr.loaded / xhr.total * 100) + '% loaded' );
+	  }, function (error) {
+		console.error(error);
+	  });
+	  
+	  var loader3 = new THREE.GLTFLoader();
+	  loader3.load('rubix2.glb', function (gltf) {
+	  gltf.scene.position.x = -25
+	  gltf.scene.scale.x = 1.5
+	  gltf.scene.scale.y = 1.5
+	  gltf.scene.scale.z = 1.5
+	  scene.add(gltf.scene);
+	  }, function (xhr) {
+		console.log((xhr.loaded / xhr.total * 100) + '% loaded' );
+	  }, function (error) {
+		console.error(error);
+	  });
+	  
+	  function animate() {
+		requestAnimationFrame(animate);
+		renderer.render(scene, camera);
+	  }
+	  animate();
+
+		</script>
+	</body>
+</html>
