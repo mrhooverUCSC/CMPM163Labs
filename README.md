@@ -10,3 +10,7 @@ The first cube has a "Normal" material, which appears to be a maxed out color on
 The second cube is the basic Phong model that was given in Part1 of this lab.  I left it unchanged.
 The third cube is the example rendering cube.  I also left it unchanged.
 The fourth cube is the rendered cube with the same vertexShader as the third, but with a different framentShader.  The only difference is that I changed the "vUv" to have a ".x" ending, which changed the side that the shader starts from. Then, during the html loading, I changed the colors to pink and lighter pink.
+
+A) x = 8 * u
+B) y = -8v + 8
+C) blue
