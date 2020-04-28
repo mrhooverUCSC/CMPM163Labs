@@ -11,6 +11,15 @@ The second cube is the basic Phong model that was given in Part1 of this lab.  I
 The third cube is the example rendering cube.  I also left it unchanged.
 The fourth cube is the rendered cube with the same vertexShader as the third, but with a different framentShader.  The only difference is that I changed the "vUv" to have a ".x" ending, which changed the side that the shader starts from. Then, during the html loading, I changed the colors to pink and lighter pink.
 
+Lab 4 Video: https://drive.google.com/file/d/1-dAu9BOkkr7nu4BSDN_J2Gj70S4-8HRr/view?usp=sharing
+
+My first three cubes are all slightly angled to show how the lighting moves in more detail.
+Cube 1 is the leftmost one in the top row.  It uses the built in THREE.js textures, loading a jpg without a normMap. This leaves it flat on all sides
+Cube 2 is the middle one in the top row.  This has the addition of the normMap, which is highlighted through the lighting moving side to side.
+Cube 3 is the right one in the top row.  It has a different norm map than its image.  All of these have the norm map and image placed in a Phong material before being placed onto the cube through a THREE Mesh.
+Cube 4 is the cube on the right in the bottom row.  It doesn't use the THREE.js shaders, instead using the fragment and vertex shaders loaded in the shaders folder.  These are loaded in the script and then added to create a basic THREE.js mesh.  It doesn't need the Phong mesh like the other cubes because of the shaders that are added to the material beforehand.
+Cube 5 uses the same process as 4 of using our own shaders to create a material that is added to the cube geometry to make a mesh.  However, the fragment shader is slightly changed to achieve the tiling effect.  Here, I used the "mod" function on the vUv vector in the fragment shader with a float of 1.0, and multipled the vUv vector in the vertex shader by 2.0.  The vertex shader change compresses the texture because each pixel is reading twice as far as it should, which is why when the fragment shader is not enabled it appears to be stretched over the cube.  The fragment shader, when enabled with the mod 1.0, makes it so instead of stretching the last color over the rest of the cube because of an out of bounds read, reads the original image a second time because the modulo returns a number that is again in bounds of the original image.
+Question 24 answers:
 A) x = 8 * u
 B) y = -8v + 8
 C) blue

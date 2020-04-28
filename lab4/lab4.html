@@ -10,26 +10,7 @@
 	</head>
 	<body>
 		<script src="../three.js-master/build/three.js"></script>
-		<script id="vertexShader" type="x-shader/x-vertex">
-			// code for vertex shader
-			varying vec2 vUv;
-			void main() {
-			  vUv = uv;
-			  vec4 modelViewPosition = modelViewMatrix * vec4(position, 1.0);
-			  gl_Position = projectionMatrix * modelViewPosition;
-			}
-			</script>
-
-		<script id="fragmentShader" type="x-shader/x-fragment">
-			// code for fragment shader
-			uniform sampler2D texture1;
-			varying vec2 vUv;
-			void main() {
-				gl_FragColor = texture2D(texture1, vUv);
-			}
-		</script>
-
-		<script>		
+		<script>
 			// setup the scene
       		var scene = new THREE.Scene();
       		var camera = new THREE.PerspectiveCamera(75, 
@@ -66,7 +47,7 @@
 
 			// add the light
 			var light = new THREE.PointLight(0xffffff, 1, 1000);
-			light.position.set(10, 10, 10);
+			light.position.set(10, 10, 8);
 			scene.add(light);
 
 			
