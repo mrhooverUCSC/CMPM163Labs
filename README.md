@@ -23,3 +23,7 @@ Question 24 answers:<br/>
 A) x = 8 * u<br/>
 B) y = -8v + 8<br/>
 C) blue<br/>
+
+
+Lab 5:
+For my Kart Game, my material modifications begin with the kart.  I changed the body of the kart into a more metallic color, by increasing both the "metallic" and "smoothness" values.  My particles come from both wheels, aimed in a low, behind the wheel position instead of the high arch from side in the example.  Next, I replaced my checkpoints with coins, with the coin model from https://www.cgtrader.com/items/834842/download-page.  There are 10 in all.  Then I used the extra track on the side to expand the track, using the inclined turns and copying the old pieces.  Finally, the ramp material was changed to be a transparent amber color through the "UI/Lit/Transparent" shader with a red tint, because the setting sun gives off a red color as well.
