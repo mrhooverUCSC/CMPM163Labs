@@ -38,4 +38,4 @@ Material:  I chose a wooden fence as my material.  To make the Unity material, I
 ![](lab6/woodfence.jpg) <br/>
 ![](lab6/woodmaterial.png) <br/>
 The other two materials are the same ones from the eariler box projects.  I reused them because this is more about showing that I can bring textures in, and they already look good and come with a normal map.  The left is the pebbles, the right is the one everyone used for the 2x2 shading.<br/>
-For my skybox, I downloaded a set of 6 images, created a cubemap to put them in, then made a new material as a cubemap skybox to loaded that cubemap into, then set that as my skybox in the Lighting control panel.  It's a little pixelated because I used a smaller detailing because it was taking a long time to render. <br/>
+For my skybox, I downloaded a set of 6 images, created a cubemap to put them in, then made a new material as a cubemap skybox to loaded that cubemap into, then set that as my skybox in the Lighting control panel.  The picture is of a clouded sky with the sun peaking from behind the clouds.  It's a little pixelated because I used a smaller detailing because it was taking a long time to render. <br/>
