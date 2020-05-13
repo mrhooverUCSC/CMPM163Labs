@@ -36,7 +36,7 @@ Directional light: Instead of shooting out light from a point, this light's posi
 Point light: This light is a single point of light that shines in all directions equally, in a sphere around the light's position.  Mine is just above the right block, with a turquoise hue to stand out. <br/>
 Area light: This creates a plane of light that only shines in one direction.  The plane can be adjusted in size, rotation, and brightness.  However, it only works with baked lighting, unlike all of the others.  My area light is directly in front of the camera, giving a soft purple glow to the blocks. <br/>
 Material:  I chose a wooden fence as my material.  To make the Unity material, I created a new material set to have Opaque rendering using the Albedo Alpha source.  Next, I cropped a square out of my picture for the Albedo map, giving it a brownish color as well.  Finally, I automatically created a normal map using GIMP, and added that to the material. <br/>
-![](lab6/woodfence.png)
+![](lab6/woodfence.png) <br/>
 ![](lab6/woodmaterial.png)
 The other two materials are the same ones from the eariler box projects.  I reused them because this is more about showing that I can bring textures in, and they already look good and come with a normal map.  The left is the pebbles, the right is the one everyone used for the 2x2 shading.<br/>
-For my skybox, I downloaded a set of 6 images, created a cubemap to put them in, then made a new material as a cubemap skybox to loaded that cubemap into, then set that as my skybox in the Lighting control panel.<br/>
+For my skybox, I downloaded a set of 6 images, created a cubemap to put them in, then made a new material as a cubemap skybox to loaded that cubemap into, then set that as my skybox in the Lighting control panel.  It's a little pixelated because I used a smaller detailing because it was taking a long time to render. <br/>
