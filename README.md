@@ -1,5 +1,7 @@
 # CMPM163Labs
-Lab 8: https://gyazo.com/cab3f1e781407bfcae23d6a07c34b893
+Lab 8: ![](lab8/TutorialCity.png)<br/>
+![](lab8/CreativeCity.jpg)<br/>
+![](lab8/MnBCity.jpg)<br/>
 
 Lab 7: https://drive.google.com/file/d/1zlS7iqZSqb57wJcejdZCftravO9251-6/view?usp=sharing <br/>
 I did part 1. <br/>
