@@ -1,7 +1,7 @@
 # CMPM163Labs
 lab 9: ![](lab9/tree.png)<br/>
 ![](lab9/bolt.png)<br/>
-I wanted to make mine similar to a lightning bolt, thin at the top but with streaks coming off it that become more intense as it goes down.
+I wanted to make mine similar to a lightning bolt, thin at the top but with streaks coming off it that become more intense as it goes down.  To achieve this, I used two different length pieces, A and B, with A being the main structure of the bolt and B the main off splitting from it.  The B is also one third the length of the A branches of equivalent depth.  I made the A repition "A[-B+B-B]+A[-B+B-B]-B", so clusters of B would split off of the A for the mini arcs, and the other A would end sooner than the main branch but still make larger arcs.  Next, the B repition is "ABA", because just a B to A didn't look fractured enough.  Finally, I started with "ABBA" because I noticed the first step needed to be more complicated to look believable at the start.
 
 Lab 8: ![](lab8/TutorialCity.png)<br/>
 (It doesn't say to add this picture in the summary, but it does in the step-by-step, so I put it here.)
