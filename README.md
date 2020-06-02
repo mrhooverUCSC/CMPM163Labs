@@ -1,4 +1,8 @@
 # CMPM163Labs
+lab 9: ![](lab9/tree.png)<br/>
+![](lab9/bolt.png)<br/>
+I wanted to make mine similar to a lightning bolt, thin at the top but with streaks coming off it that become more intense as it goes down.
+
 Lab 8: ![](lab8/TutorialCity.png)<br/>
 (It doesn't say to add this picture in the summary, but it does in the step-by-step, so I put it here.)
 ![](lab8/CreativeCity.jpg)<br/>
