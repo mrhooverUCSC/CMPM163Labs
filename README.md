@@ -1,5 +1,13 @@
 # CMPM163Labs
-Lab 8: https://gyazo.com/cab3f1e781407bfcae23d6a07c34b893
+Lab 8: ![](lab8/TutorialCity.png)<br/>
+(It doesn't say to add this picture in the summary, but it does in the step-by-step, so I put it here.)
+![](lab8/CreativeCity.jpg)<br/>
+(My city)
+![](lab8/MnBCity.jpg)<br/>
+(Inspiration city)
+The most important part for me was making the buildings actually load in.  The presets came with very strict LODs, which made it impossible to see anything.  I eventually found out how to force the LOD to the highest quality and one below, but that made it much slower, so I just took a picture instead of a video.  It's inspired from the Mount and Blade: Warband villages, I couldn't get hills to work with the generation for variable Y values but the open spaces and grass really fits the country theme from the buildings.  I pushed the buildings into an ascending height, making the smaller ones (grass being the smallest) more common than the bigger ones in ascending order.  <br/>
+This is its own project, not an addition to a previous scene.  <br/>
+d ii) My partner, Nicholas Gleason, did part b of the project.  His city is very different because of that, but one of the unique things he did was add color coded sections and a seperate hilly zone, to make it look like LA.  My favorite part is how it ends up looking like an old SimCity game.
 
 Lab 7: https://drive.google.com/file/d/1zlS7iqZSqb57wJcejdZCftravO9251-6/view?usp=sharing <br/>
 I did part 1. <br/>
